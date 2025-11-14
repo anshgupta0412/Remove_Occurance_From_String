@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string s = {"aababcbccabc"};
+    string part = {"ab"};
+    
+    while(s.length() > 0 && s.find(part) < s.length()){
+        s.erase(s.find(part), part.length());
+    }
+    
+    cout << "string become : " << s << endl;
+    return 0;
+}
